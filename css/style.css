@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'League Spartan', sans-serif;
+  background-color: rgb(58, 71, 100);
+}
+.calculator-section {
+  width: 50rem;
+  margin: 6.4rem auto;
+}
+.heading-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.heading-calculator {
+  color: #fff;
+}
+.theme-section {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.redButton.horizTranslate1 {
+  transition: transform 0.1s linear;
+  transform: translateX(0rem);
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(0rem);
+}
+.redButton.horizTranslate2 {
+  transition: transform 0.1s linear;
+  transform: translateX(2rem);
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(2rem);
+}
+.redButton.horizTranslate3 {
+  transition: transform 0.1s linear;
+  transform: translateX(4rem);
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(4rem);
+}
+.toggle-btn {
+  position: relative;
+}
+#buttonContainer {
+  position: relative;
+  display: block;
+  width: 6.6rem;
+  height: 2.4rem;
+  border-radius: 2.2rem;
+  background-color: rgb(35, 44, 67);
+}
+.redButton {
+  position: relative;
+  top: 12%;
+  left: 5%;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: rgb(208, 63, 47);
+}
+#legendTextContainer {
+  left: 0.2rem;
+  display: inline-block;
+  position: absolute;
+  top: -1.4rem;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.legendText1,
+.legendText2,
+.legendText3 {
+  display: inline-block;
+  width: 1.8rem;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+.calculator-display {
+  background-color: rgb(24, 32, 52);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 100%;
+  height: 10rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.display-text {
+  color: #fff;
+  font-size: 4.8rem;
+  margin-right: 2rem;
+}
+.calculator-keys {
+  width: 100%;
+  background-color: rgb(24, 32, 52);
+  border-radius: 1rem;
+}
+.number-keys {
+  padding: 4rem 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.calc-button {
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 3.2rem;
+  color: rgb(58, 71, 100);
+  background-color: rgb(234, 227, 220);
+  width: 100%;
+  padding: 1.5rem 0 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0 rgb(180, 165, 151);
+  outline: none;
+}
+.calc-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.alternate-button {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgb(99, 112, 151);
+  box-shadow: 0 0.4rem 0 rgb(64, 78, 114);
+  font-size: 2.4rem;
+  padding-top: 1.8rem;
+}
+.main-keys {
+  padding: 0 2rem 4rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.equal-button {
+  color: #fff;
+  background-color: rgb(208, 63, 47);
+  box-shadow: 0 0.4rem 0 rgb(147, 38, 26);
+}
+@media (max-width: 33em) {
+  .calculator-section {
+    width: 40rem;
+  }
+  .display-text {
+    font-size: 3.2rem;
+  }
+  .calc-button {
+    padding: 1rem 0 0.5rem 0;
+  }
+}
+@media (max-width: 27em) {
+  .calculator-section {
+    width: 35rem;
+  }
+  .calculator-display {
+    height: 8rem;
+  }
+  .display-text {
+    font-size: 2.8rem;
+  }
+  .calc-button {
+    font-size: 2.4rem;
+  }
+  .alternate-button {
+    font-size: 2rem;
+  }
+  .number-keys {
+    padding: 2rem;
+  }
+  .main-keys {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 24em) {
+  .calculator-section {
+    width: 30rem;
+  }
+  .display-text {
+    font-size: 2.8rem;
+  }
+  .calc-button {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 18em) {
+  .calculator-section {
+    width: 25rem;
+  }
+  .calculator-display {
+    height: 6rem;
+  }
+  .display-text {
+    font-size: 2.2rem;
+  }
+  .calc-button {
+    font-size: 2rem;
+  }
+  .alternate-button {
+    font-size: 1.8rem;
+  }
+  .number-keys {
+    padding: 1rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+  .main-keys {
+    padding: 0 1rem 1rem 1rem;
+    gap: 1rem;
+  }
+}
