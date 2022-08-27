@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Docker Build') {
             steps {
-                sh "docker build -t ${registry} ."
+                sh "sudo docker build -t ${registry} ."
             }
         }
         
