@@ -11,6 +11,11 @@ pipeline {
                 sh "docker build -t ${registry} ."
             }
         }
-        
+		stage('Login'){
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW'
+				sh 'echo $DOCKERHUB_CREDENTIALS_USR'
+			}
+        }
     }
 }
