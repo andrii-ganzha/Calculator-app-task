@@ -16,7 +16,7 @@ pipeline {
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login login -u DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
         }
-		stage('Push){
+		stage('Push'){
 			steps{
 				sh 'docker push ${registry}'
 			}
