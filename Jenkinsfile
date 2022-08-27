@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        dockerTool 'docker'
-    }
     environment {
         registry = "$calculator_registry/calculator_repository:latest"
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub_cred')
