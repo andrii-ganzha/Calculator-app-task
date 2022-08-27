@@ -20,7 +20,7 @@ pipeline {
 			steps{
 				sh 'docker push ${registry}'
 			}
-		{
+		}
     }
 	
 	post {
